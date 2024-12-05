@@ -1,5 +1,6 @@
 package net.brocker.unforgivingmaze;
 
+import net.brocker.unforgivingmaze.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +12,6 @@ public class TheUnforgivingMaze implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItems.registerModItems();
 	}
 }
