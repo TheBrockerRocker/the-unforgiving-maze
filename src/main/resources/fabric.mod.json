@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "unforgiving-maze",
+	"version": "${version}",
+	"name": "the unforgiving maze",
+	"description": "trapped, will you make it far or turn back for the better?",
+	"authors": [
+		"The Brocker Rocker",
+		"Evanloveskaas",
+		"Teunio2010",
+		"CapyLuckyBang",
+		"Stef meister"
+	],
+	"contact": {
+		"homepage": "https://discord.gg/wnngmEKRGa",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/unforgiving-maze/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.brocker.unforgivingmaze.TheUnforgivingMaze"
+		],
+		"client": [
+			"net.brocker.unforgivingmaze.TheUnforgivingMazeClient"
+		],
+		"fabric-datagen": [
+			"net.brocker.unforgivingmaze.TheUnforgivingMazeDataGenerator"
+		]
+	},
+	"mixins": [
+		"unforgiving-maze.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
