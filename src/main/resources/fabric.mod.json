@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "unforgiving-maze",
+	"id": "unforgiving_maze",
 	"version": "${version}",
-	"name": "the unforgiving maze",
-	"description": "trapped, will you make it far or turn back for the better?",
+	"name": "The Unforgiving Maze",
+	"description": "Trapped, will you make it far or turn back for the better?",
 	"authors": [
 		"The Brocker Rocker",
 		"Evanloveskaas",
@@ -16,7 +16,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/unforgiving-maze/icon.png",
+	"icon": "assets/unforgiving_maze/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -30,7 +30,7 @@
 		]
 	},
 	"mixins": [
-		"unforgiving-maze.mixins.json"
+		"unforgiving_maze.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.9",
@@ -39,6 +39,6 @@
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"another-mod": "*"
+
 	}
 }
