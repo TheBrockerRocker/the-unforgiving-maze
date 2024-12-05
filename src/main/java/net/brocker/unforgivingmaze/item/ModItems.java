@@ -11,7 +11,9 @@ public class ModItems {
         return Registry.register(Registries.ITEM, Identifier.of(TheUnforgivingMaze.MOD_ID, name), item);
     }
 
+    // TODO: Add some items.
+
     public static void registerModItems() {
-        TheUnforgivingMaze.LOGGER.info("registering mod items for " + TheUnforgivingMaze.MOD_ID);
+        TheUnforgivingMaze.LOGGER.info("Registering Mod Items for " + TheUnforgivingMaze.MOD_ID);
     }
 }
