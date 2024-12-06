@@ -3,6 +3,7 @@ package net.brocker.unforgivingmaze.block;
 import net.brocker.unforgivingmaze.TheUnforgivingMaze;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -31,6 +32,7 @@ public class ModBlocks {
             "faded_marble_bricks",
             true
     );
+
 
     private static Block register(AbstractBlock.Settings blockSettings, String name, boolean shouldRegisterItem) {
         // Register the block and its item.
