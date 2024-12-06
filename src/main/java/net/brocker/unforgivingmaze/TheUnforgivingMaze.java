@@ -14,9 +14,9 @@ public class TheUnforgivingMaze implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItemGroups.registerItemGroups();
-
 		ModItems.registerModItems();
-//		ModBlocks.registerModBlocks();
+		ModBlocks.registerModBlocks();
+
+		ModItemGroups.registerItemGroups();
 	}
 }

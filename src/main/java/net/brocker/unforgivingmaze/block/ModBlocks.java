@@ -7,30 +7,51 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
+    public static final Block FADED_MARBLE = register(
+            AbstractBlock.Settings.create()
+                    .strength(-1f, 3600f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.TUFF)
+            ,
+            "faded_marble",
+            true
+    );
+    public static final Block FADED_MARBLE_BRICKS = register(
+            AbstractBlock.Settings.create()
+                    .strength(-1f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.TUFF)
+            ,
+            "faded_marble_bricks",
+            true
+    );
 
-    public static final Block FADED_MARBLE = registerBlock("faded_marble",
-            new Block(AbstractBlock.Settings.create().strength(-1f, 3600f).requiresTool().sounds(BlockSoundGroup.TUFF)));
-    public static final Block FADED_MARBLE_BRICKS = registerBlock("faded_marble_bricks",
-            new Block(AbstractBlock.Settings.create().strength(-1f).requiresTool().sounds(BlockSoundGroup.TUFF)));
+    private static Block register(AbstractBlock.Settings blockSettings, String name, boolean shouldRegisterItem) {
+        // Register the block and its item.
+        Identifier id = Identifier.of(TheUnforgivingMaze.MOD_ID, name);
+        // Required in 1.21.2+
+        RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, id);
+        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, id);
+        // Create the block
+        final Block block = new Block(blockSettings.registryKey(key));
 
-    private static Block registerBlockWithoutBlockItem(String name, Block block) {
-        return Registry.register(Registries.BLOCK, Identifier.of(TheUnforgivingMaze.MOD_ID, name), block);
+        // Sometimes, you may not want to register an item for the block.
+        // Eg: if it's a technical block like `minecraft:air` or `minecraft:end_gateway`
+        if (shouldRegisterItem) {
+            BlockItem blockItem = new BlockItem(block, new Item.Settings()
+                    .useBlockPrefixedTranslationKey()
+                    .registryKey(itemKey));
+            Registry.register(Registries.ITEM, id, blockItem);
+        }
+
+        return Registry.register(Registries.BLOCK, id, block);
     }
-
-    private static Block registerBlock(String name, Block block) {
-        registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(TheUnforgivingMaze.MOD_ID, name), block);
-    }
-
-    private static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, Identifier.of(TheUnforgivingMaze.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()));
-    }
-
     public static void registerModBlocks() {
             TheUnforgivingMaze.LOGGER.info("Registering Mod Blocks for " + TheUnforgivingMaze.MOD_ID);
     }
