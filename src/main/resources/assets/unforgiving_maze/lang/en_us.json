@@ -1,5 +1,8 @@
 {
-  "itemGroup.unforgivingMaze.gear": "Unforgiving Maze: Gear",
-  "itemGroup.unforgivingMaze.blocks": "Unforgiving Maze: Blocks",
-  "itemGroup.unforgivingMaze.items": "Unforgiving Maze: Items"
+  "itemGroup.unforgiving_maze.gear": "Unforgiving Maze: Gear",
+  "itemGroup.unforgiving_maze.blocks": "Unforgiving Maze: Blocks",
+  "itemGroup.unforgiving_maze.items": "Unforgiving Maze: Items",
+
+  "block.unforgiving_maze.faded_marble": "Faded Marble",
+  "block.unforgiving_maze.faded_marble_bricks": "Faded Marble Bricks"
 }

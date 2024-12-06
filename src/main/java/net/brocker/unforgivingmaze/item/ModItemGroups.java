@@ -12,25 +12,23 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
-	// The icons and entries are temporary and will be removed when we add our own items.
-	// Without the icon and entries the groups will not appear.
 	public static final ItemGroup ITEM_GROUP_GEAR = register("gear", FabricItemGroup.builder()
-            .displayName(Text.translatable("itemGroup.unforgivingMaze.gear"))
+            .displayName(Text.translatable("itemGroup.unforgiving_maze.gear"))
 			.icon(() -> new ItemStack(Items.DIAMOND_AXE))
             .entries((displayContext, entries) -> {
 				entries.add(Items.DIAMOND_AXE);
             })
             .build());
     public static final ItemGroup ITEM_GROUP_BLOCKS = register("blocks", FabricItemGroup.builder()
-            .displayName(Text.translatable("itemGroup.unforgivingMaze.blocks"))
-			.icon(() -> new ItemStack(Items.DIAMOND_BLOCK))
+            .displayName(Text.translatable("itemGroup.unforgiving_maze.blocks"))
+			.icon(() -> new ItemStack(ModBlocks.FADED_MARBLE_BRICKS.asItem()))
             .entries((displayContext, entries) -> {
 				entries.add(ModBlocks.FADED_MARBLE);
 				entries.add(ModBlocks.FADED_MARBLE_BRICKS);
             })
             .build());
     public static final ItemGroup ITEM_GROUP_ITEMS = register("items", FabricItemGroup.builder()
-            .displayName(Text.translatable("itemGroup.unforgivingMaze.items"))
+            .displayName(Text.translatable("itemGroup.unforgiving_maze.items"))
 			.icon(() -> new ItemStack(Items.DIAMOND))
             .entries((displayContext, entries) -> {
 				entries.add(Items.DIAMOND);
