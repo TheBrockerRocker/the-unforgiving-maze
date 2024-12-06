@@ -1,5 +1,6 @@
 package net.brocker.unforgivingmaze;
 
+import net.brocker.unforgivingmaze.block.ModBlocks;
 import net.brocker.unforgivingmaze.item.ModItemGroups;
 import net.brocker.unforgivingmaze.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -16,5 +17,6 @@ public class TheUnforgivingMaze implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 
 		ModItems.registerModItems();
+//		ModBlocks.registerModBlocks();
 	}
 }

@@ -1,7 +1,9 @@
 package net.brocker.unforgivingmaze.item;
 
 import net.brocker.unforgivingmaze.TheUnforgivingMaze;
+import net.brocker.unforgivingmaze.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -26,9 +28,10 @@ public class ModItemGroups {
             .build());
     public static final ItemGroup ITEM_GROUP_BLOCKS = registerItemGroup("blocks", FabricItemGroup.builder()
             .displayName(Text.translatable("itemGroup.unforgivingMaze.blocks"))
-			.icon(() -> new ItemStack(Items.DIAMOND_BLOCK))
+			.icon(() -> new ItemStack(Blocks.DIAMOND_BLOCK))
             .entries((displayContext, entries) -> {
-				entries.add(Items.DIAMOND_BLOCK);
+//				entries.add(ModBlocks.FADED_MARBLE);
+//				entries.add(ModBlocks.FADED_MARBLE_BRICKS);
             })
             .build());
     public static final ItemGroup ITEM_GROUP_ITEMS = registerItemGroup("items", FabricItemGroup.builder()
