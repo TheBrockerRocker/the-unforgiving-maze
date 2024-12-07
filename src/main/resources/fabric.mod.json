@@ -6,6 +6,7 @@
 	"description": "Trapped, will you make it far or turn back for the better?",
 	"authors": [
 		"The Brocker Rocker",
+		"SCsupercraft",
 		"Evanloveskaas",
 		"Teunio2010",
 		"CapyLuckyBang",
@@ -27,6 +28,9 @@
 		],
 		"fabric-datagen": [
 			"net.brocker.unforgivingmaze.TheUnforgivingMazeDataGenerator"
+		],
+		"modmenu": [
+			"net.brocker.unforgivingmaze.config.ModMenuIntegration"
 		]
 	},
 	"mixins": [
@@ -39,6 +43,7 @@
 		"fabric-api": "*"
 	},
 	"suggests": {
-
+		"yet_another_config_lib_v3": ">=3.6.2+1.21.4-fabric",
+		"modmenu": ">=13.0.0-beta.1"
 	}
 }
