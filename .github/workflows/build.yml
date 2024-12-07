@@ -7,35 +7,52 @@ name: build
 on: [pull_request, push]
 
 jobs:
-  build:
-    strategy:
-      matrix:
-        # Use these Java versions
-        java: [
-          21,    # Current Java LTS
-        ]
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Validate Gradle Wrapper
-        uses: gradle/wrapper-validation-action@v2
-      - name: Setup JDK ${{ matrix.java }}
-        uses: actions/setup-java@v4
-        with:
-          java-version: ${{ matrix.java }}
-          distribution: 'microsoft'
-      - name: Make Gradle Wrapper Executable
-        run: chmod +x ./gradlew
-      - name: Build
-        run: ./gradlew build
-      - name: Upload Mod Files to Release
-        if: ${{ matrix.java == '21' }} # Only upload artifacts built from latest java
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: build/libs/*
-          tag: 'latest'
-          release_name: 'Latest Build'
-          overwrite: true
-          file_glob: true
+    build:
+        strategy:
+            matrix:
+                # Use these Java versions
+                java: [
+                        21, # Current Java LTS
+                    ]
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+            - name: Validate Gradle Wrapper
+              uses: gradle/wrapper-validation-action@v2
+            - name: Setup JDK ${{ matrix.java }}
+              uses: actions/setup-java@v4
+              with:
+                  java-version: ${{ matrix.java }}
+                  distribution: 'microsoft'
+            - name: Make Gradle Wrapper Executable
+              run: chmod +x ./gradlew
+            - name: Build
+              run: ./gradlew build
+            - name: Read Version Name
+              id: version
+              uses: juliangruber/read-file-action@v1
+              with:
+                  path: ./update/VERSION
+            - name: Read Changelog
+              id: changelog
+              uses: juliangruber/read-file-action@v1
+              with:
+                  path: ./update/CHANGELOG.md
+            - name: Remove old Release
+              uses: liudonghua123/delete-release-action@v1
+              with:
+                  release_name: Version ${{ steps.version.outputs.content}}
+                  suppress_errors: true
+            - name: Upload Mod Files to Release
+              if: ${{ matrix.java == '21' }} # Only upload artifacts built from latest java
+              uses: svenstaro/upload-release-action@v2
+              with:
+                  repo_token: ${{ secrets.GITHUB_TOKEN }}
+                  file: build/libs/*
+                  tag: ${{steps.version.outputs.content}}
+                  release_name: Version ${{ steps.version.outputs.content}}
+                  overwrite: true
+                  file_glob: true
+                  body: |
+                      ${{ steps.changelog.outputs.content }}
