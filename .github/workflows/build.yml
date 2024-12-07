@@ -39,13 +39,16 @@ jobs:
               uses: juliangruber/read-file-action@v1
               with:
                   path: ./update/CHANGELOG.md
+            - name: Get Short Commit Hash
+              id: sha
+              run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
             - name: Upload Mod Files to Release
               if: ${{ matrix.java == '21' }} # Only upload artifacts built from latest java
               uses: svenstaro/upload-release-action@v2
               with:
                   repo_token: ${{ secrets.GITHUB_TOKEN }}
                   file: build/libs/*
-                  tag: ${{steps.version.outputs.content}}-build-${{github.sha}}
+                  tag: ${{steps.version.outputs.content}}-build-${{steps.sha.outputs.sha_short}}
                   release_name: Version ${{ steps.version.outputs.content}}
                   overwrite: true
                   file_glob: true
