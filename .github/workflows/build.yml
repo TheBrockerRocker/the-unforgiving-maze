@@ -45,7 +45,7 @@ jobs:
               with:
                   repo_token: ${{ secrets.GITHUB_TOKEN }}
                   file: build/libs/*
-                  tag: ${{steps.version.outputs.content}} ${{github.sha}}
+                  tag: ${{steps.version.outputs.content}}-build-${{github.sha}}
                   release_name: Version ${{ steps.version.outputs.content}}
                   overwrite: true
                   file_glob: true
