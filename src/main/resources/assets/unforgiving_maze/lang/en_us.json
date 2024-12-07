@@ -4,5 +4,16 @@
   "itemGroup.unforgiving_maze.items": "Unforgiving Maze: Items",
 
   "block.unforgiving_maze.faded_marble": "Faded Marble",
-  "block.unforgiving_maze.faded_marble_bricks": "Faded Marble Bricks"
+  "block.unforgiving_maze.faded_marble_stairs": "Faded Marble Stairs",
+  "block.unforgiving_maze.faded_marble_slab": "Faded Marble Slab",
+  "block.unforgiving_maze.faded_marble_wall": "Faded Marble Wall",
+  "block.unforgiving_maze.faded_marble_pressure_plate": "Faded Marble Pressure Plate",
+  "block.unforgiving_maze.faded_marble_button": "Faded Marble Button",
+
+  "block.unforgiving_maze.faded_marble_bricks": "Faded Marble Bricks",
+  "block.unforgiving_maze.faded_marble_bricks_stairs": "Faded Marble Brick Stairs",
+  "block.unforgiving_maze.faded_marble_bricks_slab": "Faded Marble Brick Slab",
+  "block.unforgiving_maze.faded_marble_bricks_wall": "Faded Marble Brick Wall",
+  "block.unforgiving_maze.faded_marble_bricks_pressure_plate": "Faded Marble Brick Pressure Plate",
+  "block.unforgiving_maze.faded_marble_bricks_button": "Faded Marble Brick Button"
 }

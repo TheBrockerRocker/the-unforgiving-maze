@@ -21,10 +21,10 @@ public class ModItemGroups {
             .build());
     public static final ItemGroup ITEM_GROUP_BLOCKS = register("blocks", FabricItemGroup.builder()
             .displayName(Text.translatable("itemGroup.unforgiving_maze.blocks"))
-			.icon(() -> new ItemStack(ModBlocks.FADED_MARBLE_BRICKS.asItem()))
+			.icon(() -> new ItemStack(ModBlocks.FADED_MARBLE_BRICKS.BLOCK.asItem()))
             .entries((displayContext, entries) -> {
-				entries.add(ModBlocks.FADED_MARBLE);
-				entries.add(ModBlocks.FADED_MARBLE_BRICKS);
+				ModBlocks.FADED_MARBLE.addToItemGroup(entries);
+				ModBlocks.FADED_MARBLE_BRICKS.addToItemGroup(entries);
             })
             .build());
     public static final ItemGroup ITEM_GROUP_ITEMS = register("items", FabricItemGroup.builder()

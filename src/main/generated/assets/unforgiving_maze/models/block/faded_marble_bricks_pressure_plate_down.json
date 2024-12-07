@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_down",
+  "textures": {
+    "texture": "unforgiving_maze:block/faded_marble_bricks"
+  }
+}
