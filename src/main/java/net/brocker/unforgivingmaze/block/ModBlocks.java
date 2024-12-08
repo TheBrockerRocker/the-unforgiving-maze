@@ -1,9 +1,8 @@
 package net.brocker.unforgivingmaze.block;
 
 import net.brocker.unforgivingmaze.TheUnforgivingMaze;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.StairsBlock;
+import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -14,41 +13,53 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static final Block FADED_MARBLE = register(
-            AbstractBlock.Settings.create()
-                    .strength(-1f, 3600f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.TUFF)
-            ,
+    public static final BlockSet FADED_MARBLE = new BlockSet(
             "faded_marble",
-            true
-    );
-    public static final Block FADED_MARBLE_BRICKS = register(
             AbstractBlock.Settings.create()
                     .strength(-1f)
                     .requiresTool()
+                    .pistonBehavior(PistonBehavior.BLOCK)
                     .sounds(BlockSoundGroup.TUFF)
-            ,
+    )
+            .addStairs()
+            .addSlab()
+            .addWall()
+            .addPressurePlate(BlockSetType.IRON)
+            .addButton(BlockSetType.IRON, 20);
+    public static final BlockSet FADED_MARBLE_BRICKS = new BlockSet(
             "faded_marble_bricks",
-            true
-    );
+            AbstractBlock.Settings.create()
+                    .strength(-1f, 3600f)
+                    .requiresTool()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .sounds(BlockSoundGroup.TUFF)
+    )
+            .addStairs()
+            .addSlab()
+            .addWall()
+            .addPressurePlate(BlockSetType.IRON)
+            .addButton(BlockSetType.IRON, 20);
 
-
-    private static Block register(AbstractBlock.Settings blockSettings, String name, boolean shouldRegisterItem) {
+    private static Identifier getId(String name) {
+        return Identifier.of(TheUnforgivingMaze.MOD_ID, name);
+    }
+    private static RegistryKey<Block> getBlockRegistryKey(Identifier id) {
+        return  RegistryKey.of(RegistryKeys.BLOCK, id);
+    }
+    private static RegistryKey<Item> getItemRegistryKey(Identifier id) {
+        return  RegistryKey.of(RegistryKeys.ITEM, id);
+    }
+    private static Block register(Block block, Identifier id, boolean shouldRegisterItem) {
         // Register the block and its item.
-        Identifier id = Identifier.of(TheUnforgivingMaze.MOD_ID, name);
-        // Required in 1.21.2+
-        RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, id);
-        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, id);
-        // Create the block
-        final Block block = new Block(blockSettings.registryKey(key));
 
         // Sometimes, you may not want to register an item for the block.
         // Eg: if it's a technical block like `minecraft:air` or `minecraft:end_gateway`
         if (shouldRegisterItem) {
             BlockItem blockItem = new BlockItem(block, new Item.Settings()
                     .useBlockPrefixedTranslationKey()
-                    .registryKey(itemKey));
+                    .registryKey(
+                            getItemRegistryKey(id)
+                    ));
             Registry.register(Registries.ITEM, id, blockItem);
         }
 
