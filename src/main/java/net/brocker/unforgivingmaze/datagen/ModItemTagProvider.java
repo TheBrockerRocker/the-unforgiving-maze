@@ -1,5 +1,6 @@
 package net.brocker.unforgivingmaze.datagen;
 
+import net.brocker.unforgivingmaze.TheUnforgivingMaze;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -13,6 +14,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-
+        TheUnforgivingMaze.LOGGER.info("Configured item tags");
     }
 }

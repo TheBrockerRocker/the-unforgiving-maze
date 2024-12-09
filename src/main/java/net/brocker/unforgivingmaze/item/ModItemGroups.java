@@ -14,14 +14,14 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
 	public static final ItemGroup ITEM_GROUP_GEAR = register("gear", FabricItemGroup.builder()
-            .displayName(Text.translatable("itemGroup.unforgiving_maze.gear"))
+            .displayName(Text.translatable("item_group.unforgiving_maze.gear"))
 			.icon(() -> new ItemStack(Items.DIAMOND_AXE))
             .entries((displayContext, entries) -> {
 				entries.add(Items.DIAMOND_AXE);
             })
             .build());
     public static final ItemGroup ITEM_GROUP_BLOCKS = register("blocks", FabricItemGroup.builder()
-            .displayName(Text.translatable("itemGroup.unforgiving_maze.blocks"))
+            .displayName(Text.translatable("item_group.unforgiving_maze.blocks"))
 			.icon(() -> new ItemStack(ModBlocks.FADED_MARBLE_BRICKS.BLOCK.asItem()))
             .entries((displayContext, entries) -> {
 				ModBlocks.FADED_MARBLE.addToItemGroup(entries);
@@ -29,18 +29,16 @@ public class ModItemGroups {
 				ModBlocks.YELLOW_STONE.addToItemGroup(entries);
 				ModBlocks.PLAIN_STONE.addToItemGroup(entries);
 				ModBlocks.PLAIN_STONE_BRICKS.addToItemGroup(entries);
-				ModBlocks.CHISELED_PLAIN_STONE.addToItemGroup(entries);
 				ModBlocks.CRACKED_PLAIN_STONE_BRICKS.addToItemGroup(entries);
 				ModBlocks.MOSSY_PLAIN_STONE_BRICKS.addToItemGroup(entries);
 				ModBlocks.DARK_STONE.addToItemGroup(entries);
 				ModBlocks.DARK_STONE_BRICKS.addToItemGroup(entries);
-				ModBlocks.CHISELED_DARK_STONE.addToItemGroup(entries);
 				ModBlocks.CRACKED_DARK_STONE_BRICKS.addToItemGroup(entries);
 				ModBlocks.MOSSY_DARK_STONE_BRICKS.addToItemGroup(entries);
             })
             .build());
     public static final ItemGroup ITEM_GROUP_ITEMS = register("items", FabricItemGroup.builder()
-            .displayName(Text.translatable("itemGroup.unforgiving_maze.items"))
+            .displayName(Text.translatable("item_group.unforgiving_maze.items"))
 			.icon(() -> new ItemStack(ModItems.T1_BOSS_TICKET))
             .entries((displayContext, entries) -> {
 				entries.add(ModItems.BADGE);

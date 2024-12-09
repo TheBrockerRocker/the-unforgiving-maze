@@ -1,7 +1,7 @@
 {
-  "itemGroup.unforgiving_maze.gear": "Unforgiving Maze: Gear",
-  "itemGroup.unforgiving_maze.blocks": "Unforgiving Maze: Blocks",
-  "itemGroup.unforgiving_maze.items": "Unforgiving Maze: Items",
+  "item_group.unforgiving_maze.gear": "Unforgiving Maze: Gear",
+  "item_group.unforgiving_maze.blocks": "Unforgiving Maze: Blocks",
+  "item_group.unforgiving_maze.items": "Unforgiving Maze: Items",
 
   "block.unforgiving_maze.faded_marble": "Faded Marble",
   "block.unforgiving_maze.faded_marble_stairs": "Faded Marble Stairs",
@@ -16,23 +16,62 @@
   "block.unforgiving_maze.faded_marble_bricks_wall": "Faded Marble Brick Wall",
   "block.unforgiving_maze.faded_marble_bricks_pressure_plate": "Faded Marble Brick Pressure Plate",
   "block.unforgiving_maze.faded_marble_bricks_button": "Faded Marble Brick Button",
-  "block.unforgiving_maze.faded_marble_bricks": "Faded Marble Bricks",
-  "block.unforgiving_maze.faded_marble_bricks_stairs": "Faded Marble Brick Stairs",
-  "block.unforgiving_maze.faded_marble_bricks_slab": "Faded Marble Brick Slab",
-  "block.unforgiving_maze.faded_marble_bricks_wall": "Faded Marble Brick Wall",
-  "block.unforgiving_maze.faded_marble_bricks_pressure_plate": "Faded Marble Brick Pressure Plate",
-  "block.unforgiving_maze.faded_marble_bricks_button": "Faded Marble Brick Button",
-  "block.unforgiving_maze.faded_marble_bricks": "Faded Marble Bricks",
-  "block.unforgiving_maze.faded_marble_bricks_stairs": "Faded Marble Brick Stairs",
-  "block.unforgiving_maze.faded_marble_bricks_slab": "Faded Marble Brick Slab",
-  "block.unforgiving_maze.faded_marble_bricks_wall": "Faded Marble Brick Wall",
-  "block.unforgiving_maze.faded_marble_bricks_pressure_plate": "Faded Marble Brick Pressure Plate",
-  "block.unforgiving_maze.faded_marble_bricks_button": "Faded Marble Brick Button",
 
   "block.unforgiving_maze.yellow_stone": "Yellow Stone",
   "block.unforgiving_maze.yellow_stone_stairs": "Yellow Stone Stairs",
   "block.unforgiving_maze.yellow_stone_slab": "Yellow Stone Slab",
   "block.unforgiving_maze.yellow_stone_wall": "Yellow Stone Wall",
   "block.unforgiving_maze.yellow_stone_pressure_plate": "Yellow Stone Pressure Plate",
-  "block.unforgiving_maze.yellow_stone_button": "Yellow Stone Button"
+  "block.unforgiving_maze.yellow_stone_button": "Yellow Stone Button",
+
+  "block.unforgiving_maze.plain_stone": "Plain Stone",
+  "block.unforgiving_maze.plain_stone_stairs": "Plain Stone Stairs",
+  "block.unforgiving_maze.plain_stone_slab": "Plain Stone Slab",
+  "block.unforgiving_maze.plain_stone_wall": "Plain Stone Wall",
+  "block.unforgiving_maze.plain_stone_pressure_plate": "Plain Stone Pressure Plate",
+  "block.unforgiving_maze.plain_stone_button": "Plain Stone Button",
+  "block.unforgiving_maze.chiseled_plain_stone": "Chiseled Plain Stone",
+
+  "block.unforgiving_maze.plain_stone_bricks": "Plain Stone Bricks",
+  "block.unforgiving_maze.plain_stone_bricks_stairs": "Plain Stone Brick Stairs",
+  "block.unforgiving_maze.plain_stone_bricks_slab": "Plain Stone Brick Slab",
+  "block.unforgiving_maze.plain_stone_bricks_wall": "Plain Stone Brick Wall",
+
+  "block.unforgiving_maze.mossy_plain_stone_bricks": "Mossy Plain Stone Bricks",
+  "block.unforgiving_maze.mossy_plain_stone_bricks_stairs": "Mossy Plain Stone Brick Stairs",
+  "block.unforgiving_maze.mossy_plain_stone_bricks_slab": "Mossy Plain Stone Brick Slab",
+  "block.unforgiving_maze.mossy_plain_stone_bricks_wall": "Mossy Plain Stone Brick Wall",
+
+  "block.unforgiving_maze.cracked_plain_stone_bricks": "Cracked Plain Stone Bricks",
+  "block.unforgiving_maze.cracked_plain_stone_bricks_stairs": "Cracked Plain Stone Brick Stairs",
+  "block.unforgiving_maze.cracked_plain_stone_bricks_slab": "Cracked Plain Stone Brick Slab",
+  "block.unforgiving_maze.cracked_plain_stone_bricks_wall": "Cracked Plain Stone Brick Wall",
+
+  "block.unforgiving_maze.dark_stone": "Dark Stone",
+  "block.unforgiving_maze.dark_stone_stairs": "Dark Stone Stairs",
+  "block.unforgiving_maze.dark_stone_slab": "Dark Stone Slab",
+  "block.unforgiving_maze.dark_stone_wall": "Dark Stone Wall",
+  "block.unforgiving_maze.dark_stone_pressure_plate": "Dark Stone Pressure Plate",
+  "block.unforgiving_maze.dark_stone_button": "Dark Stone Button",
+  "block.unforgiving_maze.chiseled_dark_stone": "Chiseled Dark Stone",
+
+  "block.unforgiving_maze.dark_stone_bricks": "Dark Stone Bricks",
+  "block.unforgiving_maze.dark_stone_bricks_stairs": "Dark Stone Brick Stairs",
+  "block.unforgiving_maze.dark_stone_bricks_slab": "Dark Stone Brick Slab",
+  "block.unforgiving_maze.dark_stone_bricks_wall": "Dark Stone Brick Wall",
+
+  "block.unforgiving_maze.mossy_dark_stone_bricks": "Mossy Dark Stone Bricks",
+  "block.unforgiving_maze.mossy_dark_stone_bricks_stairs": "Mossy Dark Stone Brick Stairs",
+  "block.unforgiving_maze.mossy_dark_stone_bricks_slab": "Mossy Dark Stone Brick Slab",
+  "block.unforgiving_maze.mossy_dark_stone_bricks_wall": "Mossy Dark Stone Brick Wall",
+
+  "block.unforgiving_maze.cracked_dark_stone_bricks": "Cracked Dark Stone Bricks",
+  "block.unforgiving_maze.cracked_dark_stone_bricks_stairs": "Cracked Dark Stone Brick Stairs",
+  "block.unforgiving_maze.cracked_dark_stone_bricks_slab": "Cracked Dark Stone Brick Slab",
+  "block.unforgiving_maze.cracked_dark_stone_bricks_wall": "Cracked Dark Stone Brick Wall",
+
+  "item.unforgiving_maze.t1_mob_ticket": "T1 Mob Ticket",
+  "item.unforgiving_maze.t1_boss_ticket": "T1 Boss Ticket",
+
+  "item.unforgiving_maze.badge": "Badge"
 }

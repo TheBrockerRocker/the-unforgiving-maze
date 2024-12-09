@@ -1,5 +1,6 @@
 package net.brocker.unforgivingmaze.datagen;
 
+import net.brocker.unforgivingmaze.TheUnforgivingMaze;
 import net.brocker.unforgivingmaze.block.BlockSet;
 import net.brocker.unforgivingmaze.block.ModBlocks;
 import net.brocker.unforgivingmaze.item.ModItems;
@@ -30,27 +31,40 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockSet.DOOR.ifPresent(blockStateModelGenerator::registerDoor);
         blockSet.TRAPDOOR.ifPresent(blockStateModelGenerator::registerTrapdoor);
+
+        blockSet.CHISELED.ifPresent(blockStateModelGenerator::registerSimpleCubeAll);
+
+        TheUnforgivingMaze.LOGGER.info("Generated models for " + blockSet.NAME + " blockset");
     }
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.FADED_MARBLE);
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.FADED_MARBLE_BRICKS);
+
+        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.YELLOW_STONE);
+
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.PLAIN_STONE);
+
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.PLAIN_STONE_BRICKS);
-        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.CHISELED_PLAIN_STONE);
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.CRACKED_PLAIN_STONE_BRICKS);
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.MOSSY_PLAIN_STONE_BRICKS);
+
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.DARK_STONE);
+
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.DARK_STONE_BRICKS);
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.MOSSY_DARK_STONE_BRICKS);
-        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.CHISELED_DARK_STONE);
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.CRACKED_DARK_STONE_BRICKS);
+
+        TheUnforgivingMaze.LOGGER.info("Generated block state models");
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.T1_MOB_TICKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.T1_BOSS_TICKET, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.BADGE, Models.GENERATED);
+
+        TheUnforgivingMaze.LOGGER.info("Generated item models");
     }
 }

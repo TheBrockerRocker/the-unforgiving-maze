@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "unforgiving_maze:block/mossy_dark_stone_bricks"
+  }
+}

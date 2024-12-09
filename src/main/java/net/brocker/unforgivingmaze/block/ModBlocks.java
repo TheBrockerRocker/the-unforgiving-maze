@@ -60,6 +60,7 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.IGNORE)
                     .sounds(BlockSoundGroup.STONE)
     )
+            .addChiseled()
             .addStairs()
             .addSlab()
             .addWall()
@@ -76,14 +77,6 @@ public class ModBlocks {
             .addStairs()
             .addSlab()
             .addWall();
-    public static final BlockSet CHISELED_PLAIN_STONE = new BlockSet(
-            "chiseled_plain_stone",
-            AbstractBlock.Settings.create()
-                    .strength(-1f, 3600f)
-                    .requiresTool()
-                    .pistonBehavior(PistonBehavior.IGNORE)
-                    .sounds(BlockSoundGroup.STONE)
-    );
     public static final BlockSet MOSSY_PLAIN_STONE_BRICKS = new BlockSet(
             "mossy_plain_stone_bricks",
             AbstractBlock.Settings.create()
@@ -91,7 +84,10 @@ public class ModBlocks {
                     .requiresTool()
                     .pistonBehavior(PistonBehavior.IGNORE)
                     .sounds(BlockSoundGroup.STONE)
-    );
+    )
+            .addStairs()
+            .addSlab()
+            .addWall();
     public static final BlockSet CRACKED_PLAIN_STONE_BRICKS = new BlockSet(
             "cracked_plain_stone_bricks",
             AbstractBlock.Settings.create()
@@ -111,6 +107,7 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.IGNORE)
                     .sounds(BlockSoundGroup.STONE)
     )
+            .addChiseled()
             .addStairs()
             .addSlab()
             .addWall()
@@ -127,14 +124,6 @@ public class ModBlocks {
             .addStairs()
             .addSlab()
             .addWall();
-    public static final BlockSet CHISELED_DARK_STONE = new BlockSet(
-            "chiseled_dark_stone",
-            AbstractBlock.Settings.create()
-                    .strength(-1f, 3600f)
-                    .requiresTool()
-                    .pistonBehavior(PistonBehavior.IGNORE)
-                    .sounds(BlockSoundGroup.STONE)
-    );
     public static final BlockSet MOSSY_DARK_STONE_BRICKS = new BlockSet(
             "mossy_dark_stone_bricks",
             AbstractBlock.Settings.create()
@@ -142,7 +131,10 @@ public class ModBlocks {
                     .requiresTool()
                     .pistonBehavior(PistonBehavior.IGNORE)
                     .sounds(BlockSoundGroup.STONE)
-    );
+    )
+            .addStairs()
+            .addSlab()
+            .addWall();
     public static final BlockSet CRACKED_DARK_STONE_BRICKS = new BlockSet(
             "cracked_dark_stone_bricks",
             AbstractBlock.Settings.create()

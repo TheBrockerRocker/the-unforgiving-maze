@@ -9,35 +9,33 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    // TODO: Add some items.
-
-public static final Item T1_MOB_TICKET = register(
-        new Item(
-                new Item.Settings()
-                        .registryKey(
-                                getItemRegistryKey(getId("t1_mob_ticket"))
-                        )
-        ),
-        getId("t1_mob_ticket")
-);
-public static final Item T1_BOSS_TICKET = register(
-        new Item(
-                new Item.Settings()
-                        .registryKey(
-                                getItemRegistryKey(getId("t1_boss_ticket"))
-                        )
-        ),
-        getId("t1_boss_ticket")
-);
-public static final Item BADGE = register(
-        new Item(
-                new Item.Settings()
-                        .registryKey(
-                                getItemRegistryKey(getId("badge"))
-                        )
-        ),
-        getId("badge")
-);
+    public static final Item T1_MOB_TICKET = register(
+            new Item(
+                    new Item.Settings()
+                            .registryKey(
+                                    getItemRegistryKey(getId("t1_mob_ticket"))
+                            )
+            ),
+            getId("t1_mob_ticket")
+    );
+    public static final Item T1_BOSS_TICKET = register(
+            new Item(
+                    new Item.Settings()
+                            .registryKey(
+                                    getItemRegistryKey(getId("t1_boss_ticket"))
+                            )
+            ),
+            getId("t1_boss_ticket")
+    );
+    public static final Item BADGE = register(
+            new Item(
+                    new Item.Settings()
+                            .registryKey(
+                                    getItemRegistryKey(getId("badge"))
+                            )
+            ),
+            getId("badge")
+    );
 
     private static Identifier getId(String name) {
         return Identifier.of(TheUnforgivingMaze.MOD_ID, name);

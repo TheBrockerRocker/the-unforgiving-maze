@@ -14,9 +14,10 @@ import net.minecraft.util.Identifier;
 import java.util.Optional;
 
 public class BlockSet {
-	private final String NAME;
+	public final String NAME;
 	private final AbstractBlock.Settings DEFAULT_SETTINGS;
 	public Block BLOCK;
+	public Optional<Block> CHISELED = Optional.empty();
 	public Optional<Block> STAIR = Optional.empty();
 	public Optional<Block> SLAB = Optional.empty();
 	public Optional<Block> BUTTON = Optional.empty();
@@ -38,6 +39,24 @@ public class BlockSet {
 						settings.registryKey(registryKey)
 				), id
 		);
+	}
+	public BlockSet addChiseled() {
+		final Identifier id = this.getId("chiseled_" + this.NAME);
+		final RegistryKey<Block> registryKey = this.getBlockRegistryKey(id);
+		final AbstractBlock.Settings blockSettings = this.DEFAULT_SETTINGS.registryKey(registryKey);
+		this.CHISELED = Optional.of(
+				this.register(new Block(blockSettings), id)
+		);
+		return this;
+	}
+	public BlockSet addChiseled(AbstractBlock.Settings settings) {
+		final Identifier id = this.getId("chiseled_" + this.NAME);
+		final RegistryKey<Block> registryKey = this.getBlockRegistryKey(id);
+		final AbstractBlock.Settings blockSettings = settings.registryKey(registryKey);
+		this.CHISELED = Optional.of(
+				this.register(new Block(blockSettings), id)
+		);
+		return this;
 	}
 	public BlockSet addStairs() {
 		final Identifier id = this.getId(this.NAME + "_stairs");
@@ -224,6 +243,7 @@ public class BlockSet {
 	}
 	public void addToItemGroup(ItemGroup.Entries entries) {
 		entries.add(this.BLOCK);
+		this.CHISELED.ifPresent(entries::add);
 		this.STAIR.ifPresent(entries::add);
 		this.SLAB.ifPresent(entries::add);
 		this.WALL.ifPresent(entries::add);

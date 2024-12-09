@@ -1,6 +1,15 @@
 {
   "values": [
     "unforgiving_maze:faded_marble_wall",
-    "unforgiving_maze:faded_marble_bricks_wall"
+    "unforgiving_maze:faded_marble_bricks_wall",
+    "unforgiving_maze:yellow_stone_wall",
+    "unforgiving_maze:plain_stone_wall",
+    "unforgiving_maze:plain_stone_bricks_wall",
+    "unforgiving_maze:mossy_plain_stone_bricks_wall",
+    "unforgiving_maze:cracked_plain_stone_bricks_wall",
+    "unforgiving_maze:dark_stone_wall",
+    "unforgiving_maze:dark_stone_bricks_wall",
+    "unforgiving_maze:mossy_dark_stone_bricks_wall",
+    "unforgiving_maze:cracked_dark_stone_bricks_wall"
   ]
 }
