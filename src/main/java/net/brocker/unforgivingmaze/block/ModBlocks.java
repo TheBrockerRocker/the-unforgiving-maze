@@ -16,9 +16,10 @@ public class ModBlocks {
     public static final BlockSet FADED_MARBLE = new BlockSet(
             "faded_marble",
             AbstractBlock.Settings.create()
-                    .strength(-1f)
+                    // -1f hardness means the block can't be broken or moved,
+                    // having a resistance of 6 means it can be destroyed by explosions
+                    .strength(-1f, 6)
                     .requiresTool()
-                    .pistonBehavior(PistonBehavior.IGNORE)
                     .sounds(BlockSoundGroup.TUFF)
     )
             .addStairs()
@@ -29,9 +30,10 @@ public class ModBlocks {
     public static final BlockSet FADED_MARBLE_BRICKS = new BlockSet(
             "faded_marble_bricks",
             AbstractBlock.Settings.create()
-                    .strength(-1f, 3600f)
+                    // We set the hardness really high because blocks with a hardness of -1f can not be moved
+                    .strength(6000000.0F, 6000000.0F)
                     .requiresTool()
-                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .pistonBehavior(PistonBehavior.PUSH_ONLY)
                     .sounds(BlockSoundGroup.TUFF)
     )
             .addStairs()
@@ -42,9 +44,11 @@ public class ModBlocks {
     public static final BlockSet YELLOW_STONE = new BlockSet(
             "yellow_stone",
             AbstractBlock.Settings.create()
-                    .strength(10f, 3600f)
+                    // Low hardness so the player can break it but high resistance
+                    // so explosions can't destroy it
+                    .strength(2f, 6000000.0F)
                     .requiresTool()
-                    .pistonBehavior(PistonBehavior.IGNORE)
+                    .pistonBehavior(PistonBehavior.BLOCK)
                     .sounds(BlockSoundGroup.STONE)
     )
             .addStairs()
@@ -57,7 +61,7 @@ public class ModBlocks {
             AbstractBlock.Settings.create()
                     .strength(-1f, 3600f)
                     .requiresTool()
-                    .pistonBehavior(PistonBehavior.IGNORE)
+                    .pistonBehavior(PistonBehavior.BLOCK)
                     .sounds(BlockSoundGroup.STONE)
     )
             .addChiseled()
@@ -71,7 +75,7 @@ public class ModBlocks {
             AbstractBlock.Settings.create()
                     .strength(-1f, 3600f)
                     .requiresTool()
-                    .pistonBehavior(PistonBehavior.IGNORE)
+                    .pistonBehavior(PistonBehavior.BLOCK)
                     .sounds(BlockSoundGroup.STONE)
     )
             .addStairs()
@@ -82,7 +86,7 @@ public class ModBlocks {
             AbstractBlock.Settings.create()
                     .strength(-1f, 3600f)
                     .requiresTool()
-                    .pistonBehavior(PistonBehavior.IGNORE)
+                    .pistonBehavior(PistonBehavior.BLOCK)
                     .sounds(BlockSoundGroup.STONE)
     )
             .addStairs()
@@ -93,7 +97,7 @@ public class ModBlocks {
             AbstractBlock.Settings.create()
                     .strength(-1f, 3600f)
                     .requiresTool()
-                    .pistonBehavior(PistonBehavior.IGNORE)
+                    .pistonBehavior(PistonBehavior.BLOCK)
                     .sounds(BlockSoundGroup.STONE)
     )
             .addStairs()
@@ -104,7 +108,7 @@ public class ModBlocks {
             AbstractBlock.Settings.create()
                     .strength(-1f, 3600f)
                     .requiresTool()
-                    .pistonBehavior(PistonBehavior.IGNORE)
+                    .pistonBehavior(PistonBehavior.BLOCK)
                     .sounds(BlockSoundGroup.STONE)
     )
             .addChiseled()
@@ -118,7 +122,7 @@ public class ModBlocks {
             AbstractBlock.Settings.create()
                     .strength(-1f, 3600f)
                     .requiresTool()
-                    .pistonBehavior(PistonBehavior.IGNORE)
+                    .pistonBehavior(PistonBehavior.BLOCK)
                     .sounds(BlockSoundGroup.STONE)
     )
             .addStairs()
@@ -129,7 +133,7 @@ public class ModBlocks {
             AbstractBlock.Settings.create()
                     .strength(-1f, 3600f)
                     .requiresTool()
-                    .pistonBehavior(PistonBehavior.IGNORE)
+                    .pistonBehavior(PistonBehavior.BLOCK)
                     .sounds(BlockSoundGroup.STONE)
     )
             .addStairs()
@@ -140,7 +144,7 @@ public class ModBlocks {
             AbstractBlock.Settings.create()
                     .strength(-1f, 3600f)
                     .requiresTool()
-                    .pistonBehavior(PistonBehavior.IGNORE)
+                    .pistonBehavior(PistonBehavior.BLOCK)
                     .sounds(BlockSoundGroup.STONE)
     )
             .addStairs()
