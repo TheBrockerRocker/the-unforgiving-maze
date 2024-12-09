@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "unforgiving_maze:block/yellow_stone"
-  }
-}

@@ -27,6 +27,16 @@ public class ModItemGroups {
 				ModBlocks.FADED_MARBLE.addToItemGroup(entries);
 				ModBlocks.FADED_MARBLE_BRICKS.addToItemGroup(entries);
 				ModBlocks.YELLOW_STONE.addToItemGroup(entries);
+				ModBlocks.PLAIN_STONE.addToItemGroup(entries);
+				ModBlocks.PLAIN_STONE_BRICKS.addToItemGroup(entries);
+				ModBlocks.CHISELED_PLAIN_STONE.addToItemGroup(entries);
+				ModBlocks.CRACKED_PLAIN_STONE_BRICKS.addToItemGroup(entries);
+				ModBlocks.MOSSY_PLAIN_STONE_BRICKS.addToItemGroup(entries);
+				ModBlocks.DARK_STONE.addToItemGroup(entries);
+				ModBlocks.DARK_STONE_BRICKS.addToItemGroup(entries);
+				ModBlocks.CHISELED_DARK_STONE.addToItemGroup(entries);
+				ModBlocks.CRACKED_DARK_STONE_BRICKS.addToItemGroup(entries);
+				ModBlocks.MOSSY_DARK_STONE_BRICKS.addToItemGroup(entries);
             })
             .build());
     public static final ItemGroup ITEM_GROUP_ITEMS = register("items", FabricItemGroup.builder()

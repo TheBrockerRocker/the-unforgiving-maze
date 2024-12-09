@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "unforgiving_maze:block/yellow_stone",
-    "side": "unforgiving_maze:block/yellow_stone",
-    "top": "unforgiving_maze:block/yellow_stone"
-  }
-}

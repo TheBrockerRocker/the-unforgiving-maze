@@ -35,7 +35,16 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.FADED_MARBLE);
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.FADED_MARBLE_BRICKS);
-        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.YELLOW_STONE);
+        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.PLAIN_STONE);
+        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.PLAIN_STONE_BRICKS);
+        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.CHISELED_PLAIN_STONE);
+        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.CRACKED_PLAIN_STONE_BRICKS);
+        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.MOSSY_PLAIN_STONE_BRICKS);
+        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.DARK_STONE);
+        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.DARK_STONE_BRICKS);
+        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.MOSSY_DARK_STONE_BRICKS);
+        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.CHISELED_DARK_STONE);
+        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.CRACKED_DARK_STONE_BRICKS);
     }
 
     @Override

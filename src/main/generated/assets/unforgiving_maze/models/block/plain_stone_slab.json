@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "unforgiving_maze:block/plain_stone",
+    "side": "unforgiving_maze:block/plain_stone",
+    "top": "unforgiving_maze:block/plain_stone"
+  }
+}

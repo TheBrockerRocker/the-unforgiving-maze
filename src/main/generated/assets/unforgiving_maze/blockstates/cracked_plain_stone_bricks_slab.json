@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "unforgiving_maze:block/cracked_plain_stone_bricks_slab"
+    },
+    "type=double": {
+      "model": "unforgiving_maze:block/cracked_plain_stone_bricks"
+    },
+    "type=top": {
+      "model": "unforgiving_maze:block/cracked_plain_stone_bricks_slab_top"
+    }
+  }
+}
