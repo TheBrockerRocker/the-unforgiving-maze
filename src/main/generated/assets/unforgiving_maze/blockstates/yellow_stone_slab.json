@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "unforgiving_maze:block/yellow_stone_slab"
+    },
+    "type=double": {
+      "model": "unforgiving_maze:block/yellow_stone"
+    },
+    "type=top": {
+      "model": "unforgiving_maze:block/yellow_stone_slab_top"
+    }
+  }
+}

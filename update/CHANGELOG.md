@@ -1,5 +1,7 @@
--   Added config
+-Added config
 - Added items
   - tier 1 mob ticket
   - tier 1 boss ticket
 - seamless faded marble textures
+- added yellow stone block
+- added a badge

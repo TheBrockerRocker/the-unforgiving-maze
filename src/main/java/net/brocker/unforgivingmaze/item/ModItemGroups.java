@@ -1,5 +1,6 @@
 package net.brocker.unforgivingmaze.item;
 
+import com.terraformersmc.modmenu.util.mod.Mod;
 import net.brocker.unforgivingmaze.TheUnforgivingMaze;
 import net.brocker.unforgivingmaze.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -25,13 +26,16 @@ public class ModItemGroups {
             .entries((displayContext, entries) -> {
 				ModBlocks.FADED_MARBLE.addToItemGroup(entries);
 				ModBlocks.FADED_MARBLE_BRICKS.addToItemGroup(entries);
+				ModBlocks.YELLOW_STONE.addToItemGroup(entries);
             })
             .build());
     public static final ItemGroup ITEM_GROUP_ITEMS = register("items", FabricItemGroup.builder()
             .displayName(Text.translatable("itemGroup.unforgiving_maze.items"))
-			.icon(() -> new ItemStack(Items.DIAMOND))
+			.icon(() -> new ItemStack(ModItems.T1_BOSS_TICKET))
             .entries((displayContext, entries) -> {
-				entries.add(Items.DIAMOND);
+				entries.add(ModItems.BADGE);
+				entries.add(ModItems.T1_BOSS_TICKET);
+				entries.add(ModItems.T1_MOB_TICKET);
             })
             .build());
 

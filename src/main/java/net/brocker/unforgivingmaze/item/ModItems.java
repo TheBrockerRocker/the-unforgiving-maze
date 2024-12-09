@@ -29,6 +29,15 @@ public static final Item T1_BOSS_TICKET = register(
         ),
         getId("t1_boss_ticket")
 );
+public static final Item BADGE = register(
+        new Item(
+                new Item.Settings()
+                        .registryKey(
+                                getItemRegistryKey(getId("badge"))
+                        )
+        ),
+        getId("badge")
+);
 
     private static Identifier getId(String name) {
         return Identifier.of(TheUnforgivingMaze.MOD_ID, name);

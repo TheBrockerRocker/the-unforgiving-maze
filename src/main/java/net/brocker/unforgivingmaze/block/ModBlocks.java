@@ -39,6 +39,19 @@ public class ModBlocks {
             .addWall()
             .addPressurePlate(BlockSetType.IRON)
             .addButton(BlockSetType.IRON, 20);
+    public static final BlockSet YELLOW_STONE = new BlockSet(
+            "yellow_stone",
+            AbstractBlock.Settings.create()
+                    .strength(10f, 10f)
+                    .requiresTool()
+                    .pistonBehavior(PistonBehavior.BLOCK)
+                    .sounds(BlockSoundGroup.STONE)
+    )
+            .addStairs()
+            .addSlab()
+            .addWall()
+            .addPressurePlate(BlockSetType.IRON)
+            .addButton(BlockSetType.IRON, 20);
 
     private static Identifier getId(String name) {
         return Identifier.of(TheUnforgivingMaze.MOD_ID, name);

@@ -35,11 +35,13 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.FADED_MARBLE);
         generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.FADED_MARBLE_BRICKS);
+        generateBlockStateModelsForBlockSet(blockStateModelGenerator, ModBlocks.YELLOW_STONE);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.T1_MOB_TICKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.T1_BOSS_TICKET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BADGE, Models.GENERATED);
     }
 }
