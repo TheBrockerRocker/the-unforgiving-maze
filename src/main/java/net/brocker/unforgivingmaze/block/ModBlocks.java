@@ -31,9 +31,10 @@ public class ModBlocks {
             "faded_marble_bricks",
             AbstractBlock.Settings.create()
                     // We set the hardness really high because blocks with a hardness of -1f can not be moved
+                    // made pistons push and pull
                     .strength(6000000.0F, 6000000.0F)
                     .requiresTool()
-                    .pistonBehavior(PistonBehavior.PUSH_ONLY)
+                    .pistonBehavior(PistonBehavior.NORMAL)
                     .sounds(BlockSoundGroup.TUFF)
     )
             .addStairs()
